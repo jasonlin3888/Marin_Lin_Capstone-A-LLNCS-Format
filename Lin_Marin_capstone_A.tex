@@ -1,0 +1,83 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[]{llncs}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Alternative Methodologies in Predicitng Gestation Age and Premature Birth Risk}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Jason Lin\inst{1}\and
+Jonathan Marin\inst{1}\and
+John Santerre (Ph.D)\inst{2}}
+%
+\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Southern Methodist University, Dallas TX 75205, USA \and
+University of Chicago, Chicago IL 60637, USA}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+
+The techniques and methodologies proposed by Ngo, T. and Moufarrej, M. et al. [1] for a non-invasive blood test to determine gestational age and preterm birth risk has ground breaking potential. This provides to patients a test that are not only more accurate than traditional methods but also low in cost. The random forest model for the given features that the authors have proposed for the two different tests (gestational age and preterm birth) are fairly accurate based on measurement of error on the testing sample [1]. Nevertheless, a more thorough investigation of alternative models and methodologies should be pursued to see if there are other methods that can improve accuracy. Using the data provided by Ngo, T. and Moufarrej, M. et al. [1], the paper plans to use a wide range of machine learning and statistical techniques to improve upon the current methodology hoping to improve accuracy. By using other machine learning techniques, we hope to improve and highlight markers that determine pre-term pregnancies that will help researchers provide life saving care to infants at risk of pre-term birth. 
+
+\end{abstract}
+%
+%
+%
+\section{Introduction}
+The ability to give doctors earlier indicators concerning the development of an infant can help doctors with providing treatment plans to help infants cross over to later weeks of viability with a better quality of life. Earlier weeks of viability may incur complications to the infant. \textbf{*Come back with source for viability weeks.}   Even though countless studies and analysis have been done on the biology of fetal development, there hasn't been a proposed test that is both accurate and easy to implement. Present medical methods, mainly ultrasounds and the last menstrual period, are fairly imprecise and are easily miscalculated and misinterpreted [1]. Also these medical methods can only measure the gestational age of the baby and not the risks of being a preterm birth.  Therefore, Ngo, T. and Moufarrej, M. et al. utilized cell-free RNA (cfRNA) data from pregnant women and proposed two models: a random forest model that utilizes 8 cfRNA  to predict gestational age with high accuracy and a random forest with 7 cfRNA to predict 2 months in advance of preterm delivery with high accuracy[1]. It is one of the first breakthroughs made in this field in such a long time, however, tests need to be done to a larger population to ensure its accuracy [2]. Also as a side note two different sets of data were used to predict gestational age and preterm birth risk, which will be introduced later in the paper. These models deemed to have an accuracy of 75 to 80 percent [2], however, this is based solely on one model type. Throughout the Ngo, T. and Moufarrej, M. et. al. paper, there are no indications of other models used or tested outside of random forest. Also the paper does not indicate of how the 7 and 8 cfRNA are parsed down from the original gene set.   
+
+Therefore, the goal of the paper is to use different model specification to see if better prediction accuracy can be found compared to the current model. The paper plans to answer the question in two ways: 1. Creating lower dimensions for the gene set and 2. Using a different model algorithm implementation. Further analysis must be done on the reasoning behind using only 8 cfRNA and 7cfRNA for gestational age and preterm birth, respectively, and whether the use of principal components analysis (PCA), interaction, and feature engineering can increase the prediction power of the model with the rest of the cfRNA features. PCA, interaction, and feature engineering can decrease the dimensions of the data set and help explain variability.  There are many different data mining, machine learning, and statistical techniques that can be implemented to increase accuracy with different costs associated with each. Each model has its own assumptions, and therefore analysis must be done to ensure to not violate any that may bias the results. Some methodologies to be test are XGBoost, Clustering, and Ensembling to see if these models can produce higher accuracy. Other analysis will be done to see if any other statistical and data techniques can be used to deal with how what data should be included in the training and testing, and how to deal with such a small sample size in concern with preterm data.    
+
+\section{Assumptions and  Data Analysis}
+
+\section{Data Dimension Reduction}
+
+\section{Model Methodology}
+
+\section{Comparison of Models}
+
+\section{Conclusion}
+
+\section{Appendix}
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+\bibitem{ref_article1}
+Ngo, T., Moufarrej, M., et al.: Noninvasive blood tests for fetal development predict gestational age and preterm delivery. In: Science 2018, vol.360 pp.1133-1136. \doi{10.1126/science.aar3819} 
+
+\bibitem{ref_url1}
+Standford Medicine Newscenter, \url{https://med.stanford.edu/news/all-news/2018/06/blood-test-for-pregnant-women-can-predict-premature-birth.html}.Last accessed 5 Feb 2019
+
+\bibitem{ref_article2}
+Ngo, T., Moufarrej, M., et al.: Supplementary Materials for Noninvasive blood tests for fetal development predict gestational age and preterm delivery. In: Science 2018, vol.360 pp.1133-1136. \doi{10.1126/science.aar3819} 
+
+
+
+\end{thebibliography}
+\end{document}
